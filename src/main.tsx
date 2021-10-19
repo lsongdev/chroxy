@@ -46,7 +46,7 @@ const links = [
 const App = () => {
   return (
     <Router>
-      <Header title="React App with Router" links={links} />
+      <Header title="Chroxy" links={links} />
       <div className="content">
         {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
       </div>

@@ -1,0 +1,75 @@
+.chroxy-app {
+    display: flex;
+    flex-direction: column;
+}
+
+.rr-group {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.request-form, .response-form, .history {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.request-head {
+    width: 100%;
+    display: flex;
+}
+
+.request-head input {
+    width: 100%;
+    flex: 1;
+}
+
+.request-headers, .response-headers {
+    height: 300px;
+}
+
+.request-headers-list, .response-headers-list {
+    overflow: auto;
+}
+
+.request-header-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request-header-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.request-header-line input {
+    width: 100%;
+    flex: 1;
+}
+
+.request-body textarea, .response-body textarea {
+    width: 100%;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.response-head {
+    border: 1px solid #ccc;
+}
+
+.response-header {
+    display: flex;
+}
+
+.response-header span {
+    flex: 1;
+    border: 1px solid #ccc;
+}
+
+.history-table {
+    width: 100%;
+    text-align: left;
+}
