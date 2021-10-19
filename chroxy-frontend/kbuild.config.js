@@ -9,5 +9,8 @@ exports.style = {
 };
 
 exports.plugins = [
-  typescript()
+  typescript(),
+  webpackConfig => {
+    webpackConfig.externals = {};
+  }
 ];
