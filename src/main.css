@@ -1,7 +1,99 @@
-
-html {
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    margin: auto;
+.chroxy-app {
+    height: 100vh;
+    display: flex;
+    /* overflow: hidden; */
+    flex-direction: column;
+}
+
+.rr-group {
+    width: 100%;
+    display: flex;
+}
+
+.request-form, .response-form, .history {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.request-head {
+    width: 100%;
+    display: flex;
+}
+
+.request-head input {
+    width: 100%;
+    flex: 1;
+}
+
+.request-headers-list, .response-headers-list {
+    height: 100px;
+    overflow: auto;
+    border: 1px solid #ccc;
+}
+
+.request-header-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request-header-line {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.request-header-line input {
+    width: 100%;
+    flex: 1;
+}
+
+.request-body textarea, .response-body textarea {
+    width: 100%;
+    height: 50px;
+    flex-grow: 1;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.response-head {
+    border: 1px solid #ccc;
+}
+
+.response-header {
+    display: flex;
+}
+
+.response-header span {
+    flex: 1;
+    border: 1px solid #ccc;
+}
+
+.history {
+    /* min-height: 100px; */
+}
+
+.history-table {
+    width: 100%;
+    text-align: left;
+}
+
+.history-table tbody {
+    height: 100%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .rr-group {
+        flex-direction: column;
+    }
+   
 }
