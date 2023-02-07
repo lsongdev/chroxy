@@ -3,6 +3,10 @@ html, body {
     padding: 0;
 }
 
+#app {
+    width: 100%;
+}
+
 .chroxy-app {
     height: 100vh;
     display: flex;
@@ -13,6 +17,7 @@ html, body {
 .rr-group {
     width: 100%;
     display: flex;
+    resize: vertical;
 }
 
 .request-form, .response-form, .history {
@@ -78,7 +83,7 @@ html, body {
 }
 
 .history {
-    /* min-height: 100px; */
+    min-height: 100px;
 }
 
 .history-table {

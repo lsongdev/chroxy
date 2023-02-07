@@ -28,7 +28,7 @@ const RequestTypeSelector = () => {
   );
 };
 
-const RequestHeader = ({ header, onChange }) => {
+const RequestHeader: React.FC = ({ header, onChange }) => {
   const { name, value } = header;
   const handleChange = (name) => {
     return e => {
@@ -125,7 +125,7 @@ const ResponseHeaders = ({ headers }) => {
       </div>
       <div className="response-headers-list">
         {
-          headers.map((header, i) => <ResponseHeader key={i} header={header} />)
+          headers.map((header, i) => <ResponseHeader header={header} />)
         }
       </div>
     </div>
@@ -146,7 +146,7 @@ const ResponseForm = ({ response }) => {
   );
 };
 
-const HistoryItem = ({ record }) => {
+const HistoryItem: React.FC = ({ record }) => {
   const { type, status, url } = record;
   return (
     <tr>
@@ -198,6 +198,7 @@ const ChroxyApp = () => {
     }, {});
     const res = await fetch(url, init);
     const headers = [];
+    // @ts-ignore
     for (const [name, value] of res.headers.entries()) {
       headers.push({ name, value });
     }
